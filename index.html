@@ -1,0 +1,79 @@
+<!--
+    Name: Truong-Thinh Huynh SID: 01981340
+    GitHub Username: TruongHuynh01981340
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="tableStyle.css" rel="stylesheet">
+</head>
+<body>
+    <!-- This div is saved for the generated table as it will be utilized for scrollable table. -->
+    <div id="tableTabsDiv">
+        <!-- First tab where the user will enter parameters. -->
+        <ul>
+            <li><a href="#formDiv">Enter Parameters</a></li>
+        </ul>
+        
+        <div id="formDiv">
+            <!-- Form that required four numberic valid input before being able to generate a multiplication table. -->
+            <form id="mulForm">
+                <h3>Please enter the table ranges</h3>
+        
+                <!-- Input is expecting numberic but will accept text that will be validated through a function. 
+                    The function will update the corresponding span to instruct the user whether their input is valid or invalid. 
+                    inputValidation will only be triggered if the user writes sommething in the input. 
+                    https://www.w3schools.com/html/html_tables.asp -->
+                <!-- Each input have both an input box and a slider. There is also a span that will show any error if needed. -->
+                <label for="minColVal">Minimum Column Value (between -50 to 50)</label><br>
+                <input type="text" id="minColVal" name="minColVal"><br>
+                <div id="minColSlider"></div>
+                <span id="minColValErrorMsg"></span><br><br>
+
+                <label for="maxColVal">Maximum Column Value (between -50 to 50)</label><br>
+                <input type="text" id="maxColVal" name="maxColVal"><br>
+                <div id="maxColSlider"></div>
+                <span id="maxColValErrorMsg"></span><br><br>
+
+                <label for="minRowVal">Minimum Row Value (between -50 to 50)</label><br>
+                <input type="text" id="minRowVal" name="minRowVal"><br>
+                <div id="minRowSlider"></div>
+                <span id="minRowValErrorMsg"></span><br><br>
+
+                <label for="maxRowVal">Maximum Row Value (between -50 to 50)</label><br>
+                <input type="text" id="maxRowVal" name="maxRowVal"><br>
+                <div id="maxRowSlider"></div>
+                <span id="maxRowValErrorMsg"></span><br><br>
+                
+                <!-- Tab will only be created when clicking the Regenerate Table button. -->
+                <input type="submit" value="Regenerate Table">
+            </form>
+
+            <br><br>
+
+            <!-- A button that will remove all tabs -->
+            <button id="removeAllTabsButton">Remove All Tabs</button>
+
+            <br><br>
+
+            <!-- A preview table based on the input. This table will not create any new type until Regenerate Table is clicked. -->
+            <div id="tableDiv">
+
+            </div> 
+        </div>
+    </div> 
+
+    <!-- The little 'x' when clicked will remove that specific tab is stored here. -->
+    <div id="removeTabDiv"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <script src="tableValidation.js"></script>
+</body>
+</html>

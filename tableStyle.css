@@ -1,0 +1,121 @@
+/*
+    Name: Truong-Thinh Huynh SID: 01981340
+    GitHub Username: TruongHuynh01981340
+*/
+
+/* Center the form and the components inside the form. */
+form {
+    border: 1px black dashed;
+    padding: 10px;
+    text-align: center;
+    max-width: 400px;
+    min-width: 400px;
+    margin: auto;
+}
+
+/* Change the background of where the user will input text. */
+input {
+    background-color: skyblue;
+    margin-bottom: 5px;
+}
+
+/* Change the background and text of the submit button. */
+input[type="submit"] {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+}
+
+/* Center the table and the componenets in the table. Also max width and max height that will
+    be use for determining when to allow scrollable for the table. */
+#tableDiv {
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    max-width: 1600px;
+    max-height: 600px;
+    overflow: auto;
+}
+
+.generatedTable {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+/* In the table, every even row have its background change to light blue for better readibility. */
+.generatedTable tr:nth-child(even) {
+    background-color: skyblue;
+}
+
+/* In the table, the first row is the header so its background change to black and text to white
+    for better readibility. */
+.generatedTable tr:first-child {
+    color: white;
+    background-color: black;
+    width: 40px;
+    min-width: 40px;
+}
+
+/* In the table, the first th of every row is the header so its background change to black and text to white
+    for better readibility. */
+.generatedTable tr th:first-child {
+    color: white;
+    background-color: black;
+    width: 40px;
+    min-width: 40px;
+}
+
+/* In the table, the first row of the first header should be empty so set that to black to match the headers. */
+.generatedTable tr:first-child th:first-child {
+    background-color: black;
+}
+
+/* Center the text in td to be center and have a black border with certain width. */
+.generatedTable td {
+    border: 1px solid black;
+    text-align: center;
+    width: 40px;
+    min-width: 40px;
+}
+
+/* Center the text in td to be center and have a white border with certain width. */
+.generatedTable th {
+    border: 1px solid black;
+    text-align: center;
+    width: 40px;
+    min-width: 40px;
+    background-color: black;
+}
+
+/* Centered the table and make it scrollable */
+table {
+    margin: auto;
+    overflow: auto;
+}
+
+/* Very important as it will make the left and top header fixed when scrolling */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sticky_header */
+/* https://css-tricks.com/position-sticky-and-table-headers/ */
+th {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* Center Remove All Tabs and set min and max width so it's the same size as the form box. */
+button {
+    border: 1px solid black;
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin: auto;
+    display: block;
+    max-width: 400px;
+    min-width: 400px;
+}
+
+/* Make the 'x' red so user can see and interact with it when clicked. */
+.removeTab {
+    color: red;
+    margin-right: 5px;
+}
